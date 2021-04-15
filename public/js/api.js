@@ -1,3 +1,4 @@
+//declaring the API and catching any errors
 const API = {
   async getLastWorkout() {
     let res;
@@ -10,9 +11,11 @@ const API = {
 
     return json[json.length - 1];
   },
+  //fetching the API data through json
   async addExercise(data) {
     const id = location.search.split("=")[1];
 
+  ////A fetch API call using the PUT method
     const res = await fetch("/api/workouts/" + id, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
@@ -23,6 +26,7 @@ const API = {
 
     return json;
   },
+  //A fetch API call using the POST method
   async createWorkout(data = {}) {
     const res = await fetch("/api/workouts", {
       method: "POST",

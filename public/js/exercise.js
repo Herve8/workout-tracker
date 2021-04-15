@@ -1,3 +1,4 @@
+//declaring selectors to target DOM elements
 const workoutTypeSelect = document.querySelector("#type");
 const cardioForm = document.querySelector(".cardio-form");
 const resistanceForm = document.querySelector(".resistance-form");
@@ -17,6 +18,7 @@ const newWorkout = document.querySelector(".new-workout")
 let workoutType = null;
 let shouldNavigateAway = false;
 
+//An async function with an await keyword to enable asynchronous, promise-based behavior
 async function initExercise() {
   let workout;
 
@@ -29,7 +31,7 @@ async function initExercise() {
   }
 
 }
-
+//execute the initExcercise function
 initExercise();
 
 function handleWorkoutTypeChange(event) {
@@ -48,7 +50,7 @@ function handleWorkoutTypeChange(event) {
 
   validateInputs();
 }
-
+//Function to validate user inputs
 function validateInputs() {
   let isValid = true;
 

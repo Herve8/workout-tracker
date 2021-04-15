@@ -1,3 +1,4 @@
+////An async function with an await keyword enable asynchronous, promise-based behavior
 async function initWorkout() {
   const lastWorkout = await API.getLastWorkout();
   console.log("Last workout:", lastWorkout);

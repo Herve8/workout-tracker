@@ -4,7 +4,7 @@ require('dotenv').config()
 
 
 function connect() {
-    mongoose.connect(process.env.MONGODB_DSN || 'mongodb://localhost/workout', {
+    mongoose.connect("mongodb+srv://root:root12345@cluster0.1t27v.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"|| 'mongodb://localhost/workout', {
         useNewUrlParser: true,
         useUnifiedTopology: true,
         useCreateIndex: true,
